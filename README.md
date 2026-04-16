@@ -19,7 +19,7 @@ Version Control: Git & GitHub
 📝 Project Components & Implementation
 
 1. Cryptographic Logic
-2. 
+
 I implemented a symmetric-key system where a single 128-bit key is responsible for both encryption and decryption.
 
 Key Generation: The script creates a persistent secret_key.key file.
@@ -43,6 +43,7 @@ Visual feedback for successful operations and error handling.
 5. Key Isolation: The logic separates the key from the code, allowing the key to be managed independently of the application logic.
 
 📌 Key Takeaways
+
 Understanding the lifecycle of a cryptographic key.
 
 Handling byte-to-string conversions in Python.
