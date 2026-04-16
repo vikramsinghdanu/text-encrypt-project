@@ -1,51 +1,35 @@
-Project: Symmetric Text Encryption Suite
+AES-128 Text Encryption Suite
 
-🎯 Objective
+🎯 Project Objective
 
-The primary goal of this project was to design and implement a secure, user-friendly desktop application for data confidentiality. It demonstrates the practical application of AES (Advanced Encryption Standard) to protect text-based information from unauthorized access.
+The goal of this project was to develop a secure desktop application that simplifies Symmetric Encryption. It demonstrates how to maintain data confidentiality by using industry-standard AES logic while providing a user-friendly graphical interface.
 
-🛠️ Technical Stack (Tools Used)
+🔑 Core Workflow
+
+The application implements a Symmetric Cryptography lifecycle:
+
+Key Generation: Creates a unique 128-bit key (secret_key.key). This is the single source of truth for both locking and unlocking data.
+
+Encryption: Uses the AES-128 algorithm (Fernet) to transform plaintext into an immutable, base64-encoded ciphertext.
+
+Decryption: Validates the ciphertext against the local key file to reverse the mathematical scramble and restore the original message.
+
+🛠️ Technical Stack
 
 Language: Python 3.x
 
-Cryptography: cryptography.fernet (Symmetric AES-128)
+Encryption Standard: AES-128 (Fernet)
 
-GUI Framework: Tkinter (Python Standard Library)
+Library: cryptography
 
-IDE: VS Code
+Interface: Tkinter (GUI)
 
-Version Control: Git & GitHub
+💡 Key Takeaways
 
-📝 Project Components & Implementation
+Data Confidentiality: Demonstrated how AES prevents unauthorized access to sensitive text.
 
-1. Cryptographic Logic
+Integrity Verification: Learned how modern encryption libraries detect if data has been tampered with.
 
-I implemented a symmetric-key system where a single 128-bit key is responsible for both encryption and decryption.
+Secure Key Handling: Practiced isolating encryption keys from the application source code.
 
-Key Generation: The script creates a persistent secret_key.key file.
-
-Data Scrambling: Plaintext is encoded to bytes and processed through a Fernet cipher to produce an immutable ciphertext.
-
-2. Graphical User Interface (GUI)
-   
-To move away from the command line, I built a front-end that handles:
-
-Real-time input/output display.
-
-One-click key management.
-
-Visual feedback for successful operations and error handling.
-
-3. Security Features
-    
-4. Integrity Verification: The system automatically detects if the ciphertext has been tampered with and prevents decryption.
-
-5. Key Isolation: The logic separates the key from the code, allowing the key to be managed independently of the application logic.
-
-📌 Key Takeaways
-
-Understanding the lifecycle of a cryptographic key.
-
-Handling byte-to-string conversions in Python.
-
-Developing event-driven applications using Tkinter.
+User Experience (UX): Simplified complex cryptographic operations into a clean, three-button interface.
